@@ -1,0 +1,36 @@
+name: Feature request
+description: Suggest a new feature or improvement to Porthole.
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to suggest something. A short writeup that explains *the problem* tends to lead to better outcomes than one that prescribes a specific UI — but either is welcome.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you trying to solve?
+      description: What were you trying to do when Porthole fell short? What does the current behavior force you to do instead?
+      placeholder: |
+        I'm trying to … but currently I have to …
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution (optional)
+      description: If you have a specific idea for how Porthole could solve this, describe it. Mockups, sketches, or links to how other tools handle it are all welcome.
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you considered (optional)
+      description: Workarounds you've tried, other tools that solve this differently, or features you decided against and why.
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Screenshots, unusual setup, related issues — anything that might be useful context.

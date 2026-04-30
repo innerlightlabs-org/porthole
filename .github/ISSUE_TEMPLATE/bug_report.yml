@@ -1,0 +1,85 @@
+name: Bug report
+description: Something is wrong with Porthole — wrong state, missed transition, crash, UI glitch.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for filing a bug. The fields below are the ones that almost always come up when triaging — please fill them in so we don't have to ask in a follow-up.
+
+  - type: input
+    id: porthole-version
+    attributes:
+      label: Porthole version
+      description: Menu bar icon → footer → **About** (or `defaults read /Applications/Porthole.app/Contents/Info CFBundleShortVersionString`).
+      placeholder: "0.1.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: install-method
+    attributes:
+      label: How did you install Porthole?
+      options:
+        - "Homebrew cask — stable (`brew install --cask porthole`)"
+        - "Homebrew cask — beta (`brew install --cask porthole@beta`)"
+        - "Manual `.zip` download from Releases"
+        - "Built from source"
+        - "Other / not sure"
+    validations:
+      required: true
+
+  - type: input
+    id: macos-version
+    attributes:
+      label: macOS version
+      description: Apple menu → About This Mac.
+      placeholder: "26.1 (Tahoe)"
+    validations:
+      required: true
+
+  - type: input
+    id: syncthing-version
+    attributes:
+      label: Syncthing version
+      description: Run `syncthing --version` (or check the Syncthing Web UI footer).
+      placeholder: "v1.27.4"
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did Porthole do, and what did you expect instead?
+      placeholder: |
+        Expected: …
+        Actual: …
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: As specific as you can. If it's intermittent, say so.
+      placeholder: |
+        1. Start Syncthing with …
+        2. Open Porthole popover
+        3. Notice that …
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Console / log output (optional)
+      description: |
+        Open **Console.app**, filter by `Porthole`, reproduce the issue, and paste the relevant lines below. Crash logs from `~/Library/Logs/DiagnosticReports/` are also welcome.
+      render: shell
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Screenshots, unusual setup (multi-monitor, headless server, custom Syncthing config), recent changes — anything that might be relevant.
