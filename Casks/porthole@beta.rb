@@ -1,6 +1,6 @@
 cask "porthole@beta" do
-  version "0.1.0-beta.1"
-  sha256 "36f26a37957f9182aff4420f16284d1ca779e613c0dd75ecc2b72fb5785ab5b4"
+  version "0.1.0-homebrew-cask-beta"
+  sha256 "dcc45d72dc96436b607ffa39ef2613f9ce13e8014bb7e5a24d9c1bcbfa94c58e"
 
   url "https://github.com/innerlightlabs-org/porthole/releases/download/v#{version}/Porthole-#{version}.zip"
   name "Porthole (Beta)"
