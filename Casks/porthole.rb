@@ -1,5 +1,5 @@
 cask "porthole" do
-  version "0.1.0-homebrew-cask"
+  version "0.1.0"
   sha256 "dcc45d72dc96436b607ffa39ef2613f9ce13e8014bb7e5a24d9c1bcbfa94c58e"
 
   url "https://github.com/innerlightlabs-org/porthole/releases/download/v#{version}/Porthole-#{version}.zip"
